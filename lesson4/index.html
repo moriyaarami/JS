@@ -39,16 +39,44 @@
 
         <div class="task">
             <h2>יש לקלוט שם משתמש (banana) וסיסמה (a123), ולכתוב הודעה בהתאם</h2>
-
             <input type="text" id="userName" placeholder="שם משתמש">
             <input type="password" id="password" placeholder="סיסמא">
             <button onclick="enter()">התחברות</button>
             <p id="output2"></p>
-
-
-
         </div>
 
+        <div class="task">
+            <h2>
+                יש לקלוט מספר:
+                <ul>
+                    <li>אם הוא קטן מ-40 (כולל) - לצבוע את תיבת הקלט באדום</li>
+                    <li>אם הוא בין 41 ל-60 (כולל) - לצבוע את תיבת הקלט בכתום</li>
+                    <li>אם הוא בין 61 ל-80 (כולל) - לצבוע את תיבת הקלט בכחול</li>
+                    <li>אם הוא בין 81 ל-100 (כולל) - לצבוע את תיבת הקלט בירוק</li>
+                </ul>
+            </h2>
+            <input type="number" id="number" placeholder="number" oninput="tast1()">
+
+        </div>
+        <!-- <div class="task">
+            <h2>יש לקלוט 2 ערכים ובלחיצת כפתור להחליף ביניהם</h2>
+
+            <input type="text" id="str1">
+            <input type="text" id="str2">
+            <button onclick="replace()">החלף</button>
+        </div> -->
+
+        <div class="task">
+            <p>בעל בית תוכנה החליט להעלות את המשכורת של כל תוכניתן ב-10%, בתנאי <b>שלאחר העלאה כזו</b> הסכום לא יהיה
+                יותר גבוה
+                מ-6,000 ש"ח.</p>
+            <p>אם הסכום אכן יהיה גבוה מ-6,000 ש"ח - יקבל אותו תוכניתן העלאה של 5% בלבד.</p>
+            <p>קלוט את שמו של התוכניתן ואת משכורתו הנוכחית. הצג את משכורתו של התוכניתן לאחר העלאה.</p>
+            <input type="text" id="user" placeholder="שם העובד">
+            <input type="number" id="salery" placeholder="שכר">
+            <button onclick="salerycalcultor()">חשב</button>
+            <p id="output3"></p>
+        </div>
 
     </div>
 
