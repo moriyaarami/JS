@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>lesson4</title>
+</head>
+
+<body>
+    <h1>lesson 4</h1>
+
+    <div class="frame">
+
+        <div class="task">
+            <button onclick="plus()">+</button>
+            <span id="count">1</span>
+            <button onclick="minus()">-</button>
+        </div>
+
+        <div class="task">
+            <h2>מה העיר הכי שווה?</h2>
+            <select id="city" oninput="cityChange()">
+                <option disabled selected>בחר...</option>
+                <option value="7400">נתניה</option>
+                <option value="4000">חיפה</option>
+                <option value="4000">קריית חיים</option>
+                <option value="246">נתיבות</option>
+                <option value="322">בית הלל</option>
+                <option value="696">כפר חבד</option>
+                <option value="1200">מודיעין</option>
+                <option value="502">ירכא</option>
+                <option value="3611">קריית ארבע</option>
+            </select>
+            <span id="output1"></span>
+        </div>
+
+        <div class="task">
+            <h2>יש לקלוט שם משתמש (banana) וסיסמה (a123), ולכתוב הודעה בהתאם</h2>
+
+            <input type="text" id="userName" placeholder="שם משתמש">
+            <input type="password" id="password" placeholder="סיסמא">
+            <button onclick="enter()">התחברות</button>
+            <p id="output2"></p>
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
