@@ -59,21 +59,20 @@ function tast1() {
         number.style.backgroundColor = "green";
     }
 }
-/* function replace() {
-    let num1 = document.getElementById("str1").value;
-    let num2 = document.getElementById("str2").value;
+function replace() {
+    const str1 = document.getElementById("str1").value;
+    const str2 = document.getElementById("str2").value;
 
-    str1 = str2;
-    str2 = num1;
-} */
+    document.getElementById("str1").value = str2;
+    document.getElementById("str2").value = str1;
+
+}
 
 function salerycalcultor() {
-    let name = document.getElementById("user").value;
-    let num = document.getElementById("salery").value;
+    const name = document.getElementById("user").value;
+    const num = document.getElementById("salery").value;
     let total10 = +num + +num / 10;
     let total5 = +num + (+num / 10) / 2;
-
-    /*  let output3 = document.getElementById("output3"); */
 
     if (total10 <= 6000) {
         document.getElementById("output3").innerHTML = total10;
@@ -82,18 +81,27 @@ function salerycalcultor() {
     }
 
 }
+/* function salerycalcultor() {
+    const name = document.getElementById("user").value;
+    const num = document.getElementById("salery").value;
+    let raise = salery * 1.1;
+
+    if (raise > 6000) {
+        raise = salery * 1.05;
+        document.getElementById("output3").innerHTML = 'השכר החדש של ' + name + ' הוא ' + raise + ' שח';
+    }
+
+} */
+
 
 function check() {
-    let age = document.getElementById("age").value;
-    let height = document.getElementById("height").value;
+    let age = +document.getElementById("age").value;
+    let height = +document.getElementById("height").value;
     let output = document.getElementById("output4");
 
-    if (age >= 14 && age <= 18 && height > 182) {
+    if ((age >= 14 && age <= 18 || age >= 21 && age <= 26) && height >= 182) {
         output.innerHTML = "התקבלת"
-    } else if (age >= 21 && age <= 26 && height > 182) {
-        output.innerHTML = " התקבלת"
     } else {
         output.innerHTML = "לא התקבלת"
     }
-
 }
