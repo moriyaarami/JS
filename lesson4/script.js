@@ -83,3 +83,17 @@ function salerycalcultor() {
 
 }
 
+function check() {
+    let age = document.getElementById("age").value;
+    let height = document.getElementById("height").value;
+    let output = document.getElementById("output4");
+
+    if (age >= 14 && age <= 18 && height > 182) {
+        output.innerHTML = "התקבלת"
+    } else if (age >= 21 && age <= 26 && height > 182) {
+        output.innerHTML = " התקבלת"
+    } else {
+        output.innerHTML = "לא התקבלת"
+    }
+
+}
