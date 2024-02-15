@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>lesson 5</title>
+</head>
+
+<body>
+    <h1>lesson 5</h1>
+
+    <div class="frame">
+
+        <div class="task">
+            <h2>יש להציג את כל המספרים הזוגיים עד 100</h2>
+            <button id="btn" onclick="task1()">הצג</button>
+            <p id="output1"></p>
+        </div>
+
+        <div class="task">
+            <h2>יש לקלוט מספר ולכתוב האם הוא ראשוני</h2>
+            <input type="number" oninput="task2(this)">
+            <span id="output2"></span>
+        </div>
+
+        <div class="task">
+            <h2>יש לקלוט מספר ולהציג את כל המספרים שמתחתיו (כולל)</h2>
+            <input type="number" id="num">
+            <button onclick="task3()">הצג</button>
+            <p id="output3"></p>
+        </div>
+        <!-- שעורי בית -->
+        <div class="task">
+            <h2>יש לקלוט 2 מספרים ולהציג את המספרים שבינהם (כולל)</h2>
+            <input type="number" id="num1">
+            <input type="number" id="num2">
+            <button onclick="task4()">הצג</button>
+            <p id="output4"></p>
+        </div>
+
+        <div class="task">
+            <h2>יש לקלוט מספר ולהציג את כל המחלקים שלו</h2>
+            <input type="number" oninput="task5(this)">
+            <p id="output5"></p>
+        </div>
+
+        <div class="task">
+            <h2>יש לקלוט מספר ולפי הכמות שלו להציג כוכביות</h2>
+            <input type="number" id="number">
+            <button onclick="task6()">הצג</button>
+            <p id="output6"></p>
+
+        </div>
+
+        <div class="task">
+            <h2>יש לקלוט מספר ולפי הכמות שלו להציג כוכביות בשורות נפרדות</h2>
+            <input type="number" oninput="task7(this)">
+            <p id="output7"></p>
+        </div>
+
+        <div class="task">
+            <h2>יש לקלוט מספר ולחשב את העצרת שלו ולכתוב את התרגיל עצמו</h2>
+            <input type="number" oninput="task8(this)">
+            <p id="output8"></p>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
