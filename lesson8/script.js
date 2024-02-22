@@ -1,58 +1,127 @@
-function task1() {
-    const num = +document.getElementById("num1").value;
-    let result = ' ';
+const div = document.querySelector('#numbers');
+const output = document.querySelector('#output');
 
-    for (let i = 0; i < num; i++) {
-        result += '* ';
-    }
-    document.getElementById("output1").innerHTML = result;
-}
+div.innerHTML = numbers.join(', ');
 
+function max() {
+    let num = numbers[0];
 
-function task2() {
-    const num = +document.getElementById("num2").value;
-    let result = ' ';
-
-    for (let i = 0; i < num; i++) {
-        result += '* <br>';
-    }
-    document.getElementById("output2").innerHTML = result;
-}
-
-function task3() {
-    const num = +document.getElementById("num3").value;
-    let result = ' ';
-
-    for (let i = 1; i <= num; i++) {
-        if (num % i == 0) {
-            result += i + ', '
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] > num) {
+            num = numbers[i];
         }
     }
-    document.getElementById("output3").innerHTML = result;
+    output.innerHTML = `המספר הגדול הוא:${num}`;
+
 }
-function task4() {
-    const num = +document.getElementById("num4").value;
-    let result = ' ';
-    let calc = 1;
 
-    for (let i = 1; i <= num; i++) {
-        calc *= i;
-        result += i;
-
-        if (i !== num) {
-            result += ' *';
+function min() {
+    let num = numbers[0];
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] < num) {
+            num = numbers[i];
         }
-
     }
-    document.getElementById("output4").innerHTML = ` ${result} = ${calc} `;
+
+    output.innerHTML = `המספר הקטן הוא:${num}`;
 }
 
-function cahngeColur(elem) {
-    document.body.style.backgroundColor = elem.value;
+function sum() {
+    let num = numbers[0];
+    for (let i = 0; i < numbers.length; i++) {
+        num += numbers[i];
+    }
+
+    output.innerHTML = `סכום המספרים הוא:${num}`;
 }
 
-function changeTitel(text) {
-    document.querySelector('h1').innerHTML = text;
-    document.title = text;
+function average() {
+    let num = numbers[0];
+    for (let i = 0; i < numbers.length; i++) {
+        num += numbers[i];
+    }
+
+
+
+    const average = Math.round(num / numbers.length);
+    output.innerHTML = `ממוצע המספרים הוא:${average}`;
+}
+
+function count() {
+
+    output.innerHTML = `אורך המערך הוא:${numbers.length}`;
+}
+
+function up() {
+    numbers.sort((a, b) => a - b);
+
+    div.innerHTML = numbers.join(', ');
+}
+
+function down() {
+    numbers.sort((a, b) => b - a);
+
+    div.innerHTML = numbers.join(', ');
+}
+
+function start() {
+    numbers.shift();
+
+    div.innerHTML = numbers.join(', ');
+}
+
+function end() {
+    numbers.pop();
+
+    div.innerHTML = numbers.join(', ');
+}
+/* 
+function newStart() {
+    numbers.unshift(20);
+
+    div.innerHTML = numbers.join(', ');
+}
+
+function newEnd() {
+    numbers.push(20);
+
+    div.innerHTML = numbers.join(', ');
+} */
+
+function lines() {
+    div.innerHTML = numbers.join(', <br> ');
+}
+function oneline() {
+    div.innerHTML = numbers.join(', ');
+}
+
+
+
+function startPlus() {
+    let num = document.querySelector('#number');
+
+    numbers.unshift(+num.value);
+
+    div.innerHTML = numbers.join(', ');
+}
+
+function endPlus() {
+    let num = document.querySelector('#number');
+
+    numbers.push(+num.value);
+
+    div.innerHTML = numbers.join(', ');
+}
+
+function removeNumber() {
+
+}
+
+function remove() {
+    let num = document.querySelector('#num');
+
+    numbers.splice(+num.value, 1);
+
+    div.innerHTML = numbers.join(', ');
 }
 

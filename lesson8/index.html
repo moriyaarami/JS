@@ -5,73 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="numbers.js" defer></script>
     <script src="script.js" defer></script>
-    <title>lesson 5</title>
+
+    <title>lesson 8</title>
 </head>
 
 <body>
-    <h1>lesson 7</h1>
+    <h1>lesson 8-מערכים</h1>
 
     <div class="frame">
+        <div id="numbers"></div>
         <div class="task">
-            <h2>יש לקלוט מספר ולפי הכמות שלו להציג כוכביות</h2>
-            <input type="number" id="num1">
-            <button onclick="task1()">הצג</button>
-            <p id="output1"></p>
+            <button onclick="max()">מספר גדול</button>
+            <button onclick="min()">מספר קטן</button>
+            <button onclick="sum()">סכום</button>
+            <button onclick="average()">ממוצע</button>
+            <button onclick="count()">כמות מספרים</button>
+            <button onclick="up()">מיון בסדר עולה</button>
+            <button onclick="down()">מיון בסדר יורד</button>
+            <button onclick="start()">הסרה מההתחלה</button>
+            <button onclick="end()">הסרה מהסוף</button>
+            <button onclick="lines()">שורות נפרדות</button>
+            <button onclick="oneline()">בשורה אחת</button>
+            <!-- <button onclick="newStart()">הוספת מספר רנדומלי להתחלה</button>
+            <button onclick="newEnd()">הסרת מספר רנדומלי לסוף</button> -->
+        </div>
+
+
+        <p id="output"></p>
+
+        <div class="task">
+            <h2>אפשרות להוספת מספר</h2>
+            <input type="number" id="number">
+            <button onclick="startPlus()">להתחלה</button>
+            <button onclick="endPlus()">לסוף</button>
         </div>
 
         <div class="task">
-            <h2>יש לקלוט מספר ולפי הכמות שלו להציג כוכביות בשורות נפרדות</h2>
-            <input type="number" id="num2">
-            <button onclick="task2()">הצג</button>
-            <p id="output2"></p>
+            <h2>אפשרות להסיר מספר לפי מיקום (יש להגדיר מינימום ומקסימום מהקוד)</h2>
+            <input type="number">
+            <button onclick="removeNumber()">הסר</button>
         </div>
 
         <div class="task">
-            <h2>יש לקלוט מספר ולהציג את כל המחלקים שלו</h2>
-            <input type="number" id="num3">
-            <button onclick="task3()">הצג</button>
-            <p id="output3"></p>
+            <h2>אפשרות להסיר מספר לפי הקלט</h2>
+            <input type="number" id="num">
+            <button onclick="remove()">הסר</button>
         </div>
-
-        <div class="task">
-            <h2>יש לקלוט מספר ולחשב את העצרת שלו ולכתוב את התרגיל עצמו</h2>
-            <input type="number" id="num4">
-            <button onclick="task4()">הצג</button>
-            <p id="output4"></p>
-        </div>
-
-        <div class="task">
-            <h2>יש לאפשר למשתמש לבחור צבע לאתר</h2>
-            <input type="color" oninput="cahngeColur(this)">
-        </div>
-
-        <div class="task">
-            <h2>יש לאפשר לבחור כותרת לאתר</h2>
-            <input type="text" oninput="changeTitel(this.value)">
-        </div>
-
-        <div class="task">
-            <h2>יש לאפשר לבחור כותרת לאתר מתוך רשימה</h2>
-            <select oninput="changeTitel(this.value)">
-                <option></option>
-                <option>אתר מגניב</option>
-                <option>גוגל</option>
-                <option>פייסבוק</option>
-                <option>תרגילים</option>
-            </select>
-        </div>
-
-        <div class="task">
-            <h2>לחצן המאפס את הכותרת</h2>
-            <button onclick="changeTitel('lesson 7')">איפוס</button>
-        </div>
-
-        <h2>מערכים</h2>
-
-        <div class="task">
-
-        </div>
+    </div>
 
 </body>
 
