@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;600;700;900&display=swap');
 
 :root {
-    --bg: rgb(247, 147, 233);
+    --bg: #8fdff8;
 }
 
 body {
     direction: rtl;
-    background-color: var(--bg);
     font-family: 'Rubik', sans-serif;
+    background-color: var(--bg);
 }
 
 h1 {
-    color: rgb(255, 255, 255);
+    color: white;
     text-align: center;
 }
 
@@ -19,11 +19,12 @@ h1 {
     width: 80%;
     max-width: 900px;
     min-height: 300px;
-    background-color: #fff;
-    margin: 0 auto;
+    background-color: white;
+    margin: auto;
     border-radius: 6px;
     padding: 16px;
     box-shadow: 0 0 4px #00000059;
+    padding-bottom: 100px;
 }
 
 .task {
@@ -38,12 +39,9 @@ h2 {
     margin: 0px;
 }
 
-label {
-    display: block;
-}
-
 button {
-    background-color: rgb(196, 191, 193);
+    background-color: var(--bg);
+    ;
     color: white;
     padding: 8px 12px;
     border-radius: 6px;
@@ -63,11 +61,23 @@ select {
     margin-top: 3px;
 }
 
-.ltr {
-    direction: ltr;
-    display: inline-block;
+ul,
+ol {
+    padding: 0;
+    list-style-type: none;
 }
 
-#numbers {
-    padding-bottom: 16px;
+li {
+    border-bottom: 1px solid #cccccc;
+    display: flex;
+}
+
+li:first-child {
+    border-top: 1px solid #cccccc;
+}
+
+li>div {
+    padding: 12px 8px;
+    width: 100%;
+    outline: 0;
 }
