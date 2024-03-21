@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>אובייקטים</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <h1>אובייקטים תרגול</h1>
+    <div class="frame">
+        <div class="task">
+            <h2><b>user</b></h2>
+        </div>
+
+        <div class="task">
+            <h3>ChangeName</h3>
+            <label>שם מלא</label>
+            <input type="text" id="change">
+            <button onclick="ChangeName()">שנה שם </button>
+        </div>
+
+        <div class=" task">
+            <h3>logIn</h3>
+            <label>לשנות את isLogin ל true אם השם משתמש וסיסמא נכונים</label>
+            <input type="text" id="userName">
+            <input type="text" id="password">
+            <button onclick="logIn()">היכנס</button>
+        </div>
+        <div class="task">
+            <h3>changePassword</h3>
+            <label>סיסמא ישנה</label>
+            <input type="text" id="lastpassword">
+            <label>סיסמא חדשה</label>
+            <input type="text" id="Newpassword">
+            <button onclick="changePassword()">היכנס</button>
+        </div>
+        <div class="task">
+            <h3>logOut</h3>
+            <button onclick="logOut()">logout</button>
+
+        </div>
+        <div class="task">
+            <h2><b>userBankAcount</b></h2>
+        </div>
+        <div class="task">
+            <h3>הפקדת כסף</h3>
+            <label>סכום הפקדה</label>
+            <input type="number" id="keepMoney">
+            <button onclick="keep()">הפקדה</button>
+        </div>
+        <div class="task">
+            <h3>משיכת כסף</h3>
+            <label>סיסמא</label>
+            <input type="number" id="pass">
+            <label>סכום למשיכה</label>
+            <input type="number" id="takeMoney">
+
+            <button onclick="take()">משיכה</button>
+        </div>
+        <div class="task">
+            <h3>שינוי מסגרת האשראי</h3>
+            <label>סיסמא</label>
+            <input type="number" id="yourPassword">
+            <label>מסגרת רצויה</label>
+            <input type="number" id="craditFrame">
+            <label>סיסמאת מנהל</label>
+            <input type="text" id="managerPass">
+
+            <button onclick="changeCredit()">שינוי</button>
+        </div>
+    </div>
+</body>
+
+</html>
