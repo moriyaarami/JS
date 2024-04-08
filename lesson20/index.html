@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>API</title>
+</head>
+
+<body>
+    <h1>ניהול כתבות</h1>
+    <div id="container">
+
+        <form onsubmit="logIn(event)">
+            <h2>התחברות</h2>
+            <label for="userName">שם משתמש:</label>
+            <input type="text" id="userName">
+            <label for="password">סיסמא:</label>
+            <input type="password" id="password">
+            <button class="button">התחבר</button>
+        </form>
+        <button class="logOut" onclick="logOut()">התנתק</button>
+    </div>
+</body>
+
+</html>

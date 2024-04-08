@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: grey;
+    direction: rtl;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+#container {
+    background-color: #fff;
+    width: 80vw;
+    height: 50vh;
+    margin: auto;
+    border-radius: 15px;
+    padding: 40px;
+}
+
+#container h2 {
+    text-align: center;
+    padding: 20px;
+}
+
+#container form {
+    background-color: rgb(159, 158, 158);
+    box-shadow: 3px 3px 10px black;
+    width: 60%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+
+
+}
+
+#container form label {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#container form input {
+    border-radius: 3px;
+    border: 1px solid #fff;
+    margin: 5px;
+    width: 40%;
+    height: 25px;
+}
+
+#container form .button {
+    width: 40%;
+    height: 25px;
+    margin: 10px;
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    border-radius: 3px;
+
+}
+
+.logOut {
+    display: none;
+}
+
+.logOutButton {
+    width: 30%;
+    height: 30px;
+    margin: 50px 35%;
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    border-radius: 3px;
+}

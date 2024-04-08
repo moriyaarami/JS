@@ -70,6 +70,11 @@ function checkWinner() {
         }
 
     }
+
+    if (!isGameOf && [...divs].every(x => x.innerText)) {
+        setTimeout(() => alert('אין מנצח'), 50)
+        isGameOf = true;
+    }
 }
 
 function winner(op, win) {
