@@ -67,7 +67,8 @@ h1 {
 
 }
 
-.logOut {
+.logOut,
+span {
     display: none;
 }
 
