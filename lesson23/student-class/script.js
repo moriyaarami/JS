@@ -1,4 +1,5 @@
 class Student {
+
     firstName = '';
     lastName = '';
     phone = '';
@@ -30,5 +31,18 @@ class Student {
     getTestAmount() {
         return this.grade.length;
     }
+
+    constructor(firstName, lastName, phone, birthday, city, grade) {
+
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.phone = phone;
+        this.birthday = birthday;
+        this.city = city;
+        this.grade = grade;
+
+    }
 }
+
+const student1 = new Student('moriya', 'arami', '055-686-6638', '29-04-2004', 'modiin', [100, 90, 95])
 
