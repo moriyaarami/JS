@@ -1,6 +1,15 @@
 class Student {
 
-    student;
+    student={
+        id: 0,
+        firstName: "",
+        lastName: "",
+        phone: "",
+        email: "",
+        birthday: "",
+        city: "",
+        grades: []
+    };
 
     getFullName() {
         return `${this.student.firstName} ${this.student.lastName}`;
@@ -29,28 +38,62 @@ class Student {
 
     constructor(student) {
 
-        this.student = student;
+        if (!student) {
+            throw new Error("Student not found")
+        }
+
+        for (const key in student) {
+            this.student[key] = student[key];
+        }
 
     }
 }
 
-(async function () {
-    const res = await fetch("../students.json");
-    const data = await res.json();
+async function getStudent(){
 
-    console.log(data.map(s => new Student(s)))
-})()
+    const res=await fetch("../students.json");
+    const data=await res.json();
 
-const student1 = new Student(
-    {
-        id: 9202,
-        firstName: "יפה",
-        lastName: "בהרב",
-        phone: "051-5892982",
-        email: "abc362@gmail.com",
-        birthday: "2003-06-08",
-        city: "ירוחם",
-        grades: [85, 93, 41, 74, 86, 61, 85]
-    }
-)
+    const ul =document.createElement("ul");
+   
 
+    data.forEach(s => {
+        const student = new Student(s);
+        const li = document.createElement("li");
+        li.innerText=student.getFullName();
+        ul.appendChild(li);
+    });
+
+    document.querySelector(".frame").appendChild(ul);
+
+}
+
+getStudent();
+
+
+
+// לדוגמא
+// const student1 = new Student({
+//     id: 9128,
+//     firstName: "טליה",
+//     lastName: "אנקרי",
+//     phone: "059-7101369",
+//     // email: "abc487@gmail.com",
+//     birthday: "2005-11-19",
+//     city: "חיפה",
+//     grades: [81, 87, 60]
+// });
+
+// // יצירת ציונים פיקטיביים לכל סטודנט
+// students.forEach(s => {
+//     s.grades = [];
+
+//     // טווח של 3 עד 8
+//     const max = Math.floor(Math.random() * 6) + 3;
+    
+//     for (let i = 0; i < max; i++) {
+//         // טווח של 40 עד 100
+//         const g = Math.floor(Math.random() * 61) + 40;
+//         s.grades.push(g);
+//     }
+// });

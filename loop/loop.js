@@ -1,4 +1,4 @@
-function task1(element) {
+/* function task1(element) {
     const elem = element.value;
     let res = ' ';
     for (let i = 0; i < 10; i++) {
@@ -16,4 +16,8 @@ function task2(element) {
         res += 'hello' + ' ';
         document.getElementById('output2').innerHTML = res;
     }
-}
+} */
+
+let num = 10;
+let num = 5;
+console.log(num);
