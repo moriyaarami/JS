@@ -9,7 +9,7 @@
     <script src="script.js" defer></script>
 </head>
 
-<body>
+<body onload="optionsNumbers()">
     <h1>משחק ללימודי חשבון</h1>
     <div id="options">
         <div>בחירת טווח מספרים</div>
@@ -20,14 +20,24 @@
             <option>1-500</option>
             <option>1-1000</option>
         </select>
+
+        <div>בחירת אופרטור</div>
+        <select name="operator" id="operator">
+            <option selected>אופציות</option>
+            <option>+</option>
+            <option>-</option>
+            <option>*</option>
+            <option>:</option>
+        </select>
     </div>
+
     <div id="container">
 
         <div id="exercise">
-            <span id="num1">0</span>
-            <span>+ </span>
-            <span id="num2">0</span>
-            <span> = </span>
+            <div class="task"></div>
+
+            <span>=</span>
+
 
             <input type="number" id="input">
             <button onclick="check()">בדוק</button>
@@ -51,6 +61,8 @@
 
     </div>
     <p><b>סהכ נקודות: </b><span class="score">0</span></p>
+
+    <button onclick="reset()">איפוס</button>
 </body>
 
 </html>
