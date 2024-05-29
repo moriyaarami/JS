@@ -1,8 +1,11 @@
 const div = document.createElement('div');
 const n1 = document.createElement('span');
+const n2 = document.createElement('span');
+
 const operator = document.createElement('span');
 operator.className = 'operator';
-const n2 = document.createElement('span');
+operator.innerHTML = '+'
+
 const task = document.querySelector('.task');
 task.appendChild(div);
 div.appendChild(n1);
@@ -11,48 +14,58 @@ div.appendChild(n2);
 let result;
 let score = 0;
 let thisOptionNumber = 0;
+let o;
 
 const optionsOperator = ['+', '-', '*', ':'];
 
 function Operators() {
+
     const selectElem = document.getElementById('operator');
     selectElem.addEventListener('change', () => {
         const index = selectElem.selectedIndex;
 
         if (index == 0 || index == 1) {
-
-            text(thisOptionNumber, optionsOperator[0]);
+            operator.innerHTML = optionsOperator[0];
+            result = +n1.innerHTML + + n2.innerHTML;
+            o = optionsOperator[0]
         } else if (index == 2) {
 
-            text(thisOptionNumber, optionsOperator[1]);
+            operator.innerHTML = optionsOperator[1];
+            result = +n1.innerHTML - + n2.innerHTML;
+            o = optionsOperator[1]
         } else if (index == 3) {
 
-            text(thisOptionNumber, optionsOperator[2]);
+            operator.innerHTML = optionsOperator[2];
+            result = +n1.innerHTML * + n2.innerHTML;
+            o = optionsOperator[2]
         } else if (index == 4) {
 
-            text(thisOptionNumber, optionsOperator[3]);
+            operator.innerHTML = optionsOperator[3];
+            result = +n1.innerHTML / +n2.innerHTML;
+            o = optionsOperator[3]
         }
     });
 
 }
 
-Operators();
+
 
 /* פונקציה שיוצרת תרגיל חשבון */
-function text(n, o) {
-    operator.innerHTML = o;
+function text(n) {
+
     n1.innerHTML = Math.floor(Math.random() * n) + 1;
     n2.innerHTML = Math.floor(Math.random() * n) + 1;
 
     input.value = '';
+
+    Operators();
+
 }
 
 
 function check() {
 
-    result = +n1.innerHTML + + n2.innerHTML;
-
-    /*   result = `${+n1.innerHTML} ${op} ${+n2.innerHTML}`; */
+    result = result;
     console.log(result);
 
 
@@ -134,7 +147,7 @@ function table() {
     const tbody = document.querySelector('tbody');
     const tr = document.createElement('tr');
     tr.innerHTML = `
-    <td>${n2.innerHTML}+${n1.innerHTML}</td>
+    <td>${n2.innerHTML} ${o} ${n1.innerHTML}</td>
     <td>${result}</td>
     <td>${input.value}</td>
     <td>${input.value == result ? '5' : '0'}</td>
