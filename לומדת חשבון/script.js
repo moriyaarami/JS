@@ -24,9 +24,10 @@ function Operators() {
     selectElem.addEventListener('change', () => {
         const index = selectElem.selectedIndex;
 
+
         if (index == 0 || index == 1) {
             operator.innerHTML = optionsOperator[0];
-            result = +n1.innerHTML + + n2.innerHTML;
+            result = +n1.innerHTML + + n2.innerHTML
             o = optionsOperator[0]
         } else if (index == 2) {
 
@@ -41,9 +42,11 @@ function Operators() {
         } else if (index == 4) {
 
             operator.innerHTML = optionsOperator[3];
-            result = +n1.innerHTML / +n2.innerHTML;
+
             o = optionsOperator[3]
         }
+        result;
+
     });
 
 }
@@ -65,7 +68,6 @@ function text(n) {
 
 function check() {
 
-    result = result;
     console.log(result);
 
 
