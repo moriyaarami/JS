@@ -176,3 +176,31 @@ function reset() {
     text(0);
 }
 
+
+let btn = document.querySelectorAll("button")
+
+btn.forEach(b => {
+    b.addEventListener("click", btnClick)
+});
+
+let delteBtn = document.querySelector("#calculatorDelte");
+delteBtn.removeEventListener("click", btnClick);
+delteBtn.addEventListener("click", delte);
+
+let checkBtn = document.querySelector("#calculatorCheck");
+checkBtn.removeEventListener("click", btnClick);
+checkBtn.addEventListener("click", check);
+
+function check() {
+
+}
+
+function delte() {
+    document.querySelector(".value").textContent = "";
+}
+
+function btnClick() {
+    document.querySelector(".value").textContent += this.textContent;
+}
+
+

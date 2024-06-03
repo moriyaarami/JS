@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+    <script src="js.js" defer></script>
+</head>
+
+<body onload="fnc()">
+    <div id="container">
+        <h1>לומדת חשבון</h1>
+
+        <div class="container-options">
+            <h2>אפשרויות משחק</h2>
+            <select id="difficulty">
+                <option>רמת קושי</option>
+                <option>קל </option>
+                <option>בינוני</option>
+                <option>קשה</option>
+            </select>
+
+            <!-- <select name="numbers" id="numbers">
+                <option>מספרים</option>
+                <option>1-10</option>
+                <option>1-20</option>
+                <option>1-100</option>
+                <option>1-150</option>
+            </select>
+            <select name="operators" id="operators">
+                <option>אופרטור</option>
+                <option>+</option>
+                <option>-</option>
+                <option>:</option>
+                <option>*</option>
+            </select> -->
+        </div>
+
+
+        <p>פתרת נכון: <span id="span1"></span> מתוך <span id="span2"></span> שאלות!</p>
+
+        <!-- התרגיל -->
+        <div class="task">
+
+        </div>
+
+        <div class="container-calculator">
+            <div id="calculator">
+
+                <input type="number" id="value">
+                <div class="btn-container">
+
+                    <button>1</button>
+                    <button>2</button>
+                    <button>3</button>
+                    <button>4</button>
+                    <button>5</button>
+                    <button>6</button>
+                    <button>7</button>
+                    <button>8</button>
+                    <button>9</button>
+                    <button>0</button>
+                    <button id="delte">מחק</button>
+                    <button>.</button>
+                </div>
+
+            </div>
+        </div>
+        <button onclick="check()">בדוק</button>
+    </div>
+</body>
+
+</html>
