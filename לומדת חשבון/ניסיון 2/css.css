@@ -5,9 +5,10 @@
 }
 
 body {
-    direction: rtl;
+    /*  direction: rtl; */
     text-align: center;
     background-color: rgb(201, 146, 137);
+
 }
 
 h1 {
@@ -47,7 +48,7 @@ p {
 
 .container-calculator {
 
-    width: 25%;
+    width: 20%;
     padding: 10px 0 20px 0;
     margin: 40px auto;
     background-color: rgb(0, 0, 0);
@@ -66,6 +67,11 @@ p {
 
 }
 
+.btn-container #delte {
+    grid-row: 5/6;
+    grid-column: 2/3;
+}
+
 .container-calculator #calculator input,
 #check {
     width: 80%;
@@ -75,4 +81,30 @@ p {
 .btn-container button:hover {
     background-color: rgb(192, 101, 87);
     border: 0;
+}
+
+.container-calculator #calculator input {
+    text-align: center;
+}
+
+#check {
+    width: 25%;
+    margin: 10px auto;
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: rgb(192, 101, 87);
+    font-weight: 900;
+}
+
+@media (max-width: 800px) {
+
+    body {
+        margin-top: 50px;
+    }
+
+    .container-calculator {
+
+        width: 50%;
+    }
 }
