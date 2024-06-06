@@ -1,0 +1,38 @@
+[
+    {
+        "image": ".../images/bananas-575412_640.webp",
+        "name": "banana"
+    },
+    {
+        "image": ".../images/cherry-105141_1280.webp",
+        "name": "cherry"
+    },
+    {
+        "image": ".../images/grapes-25241_640.webp",
+        "name": "grapes"
+    },
+    {
+        "image": ".../images/kiwi-161728_640.webp",
+        "name": "kiwi"
+    },
+    {
+        "image": ".../images/mangos-154390_640.webp",
+        "name": "mangos"
+    },
+    {
+        "image": ".../images/orange-1985197_640.webp",
+        "name": "orange"
+    },
+    {
+        "image": ".../images/pears-42897_640.webp",
+        "name": "pears"
+    },
+    {
+        "image": ".../images/pineapple-7745074_640.webp",
+        "name": "pineapple"
+    },
+    {
+        "image": ".../images/strawberry-36949_640.webp",
+        "name": "strawberry"
+    }
+]
