@@ -2,7 +2,6 @@ const board = document.querySelector(".container");
 const Emogi = ["😂", "😍", "😒", "😁", "😘", "😎", "🤷‍♀️", "😉", "😢"];
 const EmogiCards = [...Emogi, ...Emogi];
 const cardsCount = EmogiCards.length;
-
 let score = 0;
 
 
@@ -13,8 +12,9 @@ let awaitingEndOfMoves = false; /* מחקה לסוף הפעולה */
 
 
 function createCard(emogi) {
-
     const element = document.createElement("div");
+
+
     element.classList.add("card");
     element.innerHTML = '';
 
@@ -30,6 +30,7 @@ function createCard(emogi) {
 
         element.style.backgroundColor = 'white';
         element.innerHTML = emogi;
+
 
         if (!activeCard) {
             activeCard = element;
@@ -69,6 +70,7 @@ function createCard(emogi) {
             element.innerHTML = '';
             activeCard.innerHTML = '';
 
+
             awaitingEndOfMoves = false;
             activeCard = null;
         }, 1000)
@@ -93,12 +95,7 @@ for (let i = 0; i < cardsCount; i++) {
 
 }
 
-const flipActiveCard = () => {
-    element.classList.add('.card');
-    element.innerHTML = '';
 
-
-}
 
 
 

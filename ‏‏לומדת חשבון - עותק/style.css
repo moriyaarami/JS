@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    direction: rtl;
+    text-align: center;
+    background-color: lightblue;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+
+#calculator {
+    width: 200px;
+    background-color: black;
+    padding: .5rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 8px 2px rgba(0, 0, 0, 4);
+
+}
+
+#calculator p {
+    height: 37px;
+    font-size: xx-large;
+    color: white;
+}
+
+#calculator .btn-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: calc(100%-37px);
+}
+
+
+
+#calculator .btn-container button {
+    width: 33%;
+
+
+}
+
+#calculator .btn-container button#check {
+
+    margin-left: 33%;
+}
+
+#container {
+    width: 80vw;
+    height: 30vw;
+    background-color: #fff;
+    margin: 10% auto;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    margin: left 10px;
+    background-color: rgb(146, 146, 146);
+    font-size: 1.75em;
+    border-radius: 15px 15px 0px 0px;
+
+}
+
+#options {
+    width: 100%;
+    background-color: rgba(171, 171, 171, 0.438);
+    padding: 5px;
+
+}
+
+#options div {
+    display: block;
+}
+
+#container #exercise {
+    width: 50%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 10%;
+    font-size: 1.2em;
+}
+
+#exercise input {
+    width: 40%;
+    background-color: white;
+    border: 1px solid #000;
+    margin: 0px 5px;
+    text-align: center;
+}
+
+#exercise button {
+    width: 30%;
+    background-color: rgb(146, 146, 146);
+    border: 1px solid #000;
+}
+
+p {
+    margin: 20px auto;
+
+    font-size: 1.2em;
+}
+
+.frame {
+    width: 80vw;
+    max-height: fit-content;
+    background-color: #fff;
+    margin: auto;
+}
+
+.frame table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+.frame th {
+    background-color: rgb(129, 128, 128);
+}
+
+.frame tr,
+td {
+    border: 1px solid #000;
+}
